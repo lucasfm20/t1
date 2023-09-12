@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right,rgb(58, 58, 233),rgb(99, 99, 221));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+#container {
+    border: 2px solid rgba(0, 0, 0, 0.603);
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 90%; 
+    max-width: 400px; 
+}
+
+h1 {
+    font-size: 18px;
+    color: blue;
+    text-align: left;
+    margin: 0 0 0 30px;
+}
+
+header {
+    border-color: black;
+    border: 2px solid rgba(0, 0, 0, 0.644);
+    
+}
+
+main {
+    margin: 20px;
+    border: 2px solid rgba(0, 0, 0, 0.541);
+    border-radius: 4px;
+}
+
+#Atendente {
+    text-align: left;
+    margin: 10px;
+}
+
+#voce {
+    text-align: right;
+    margin: 14px 10px 15px 120px;
+}
+
+.at,
+.vc {
+    border: 1px solid black;
+    width: 200px;
+    height: 25px;
+    text-align: left;
+    padding: 0 0 8px 4px;
+    border-radius: 5px;
+    margin-top: 50px;
+
+    
+}
+
+footer{
+    margin: 22px;
+}
+#texto{
+    padding: 5px;
+    width: 250px;
+    background-color: rgb(204, 211, 218);
+    border: 1px solid black;
+    height: 16px;
+}
+
+#button{
+    margin: 0 0 0 10px;
+    padding: 5px;
+    cursor: pointer;
+    color: rgb(12, 92, 12);
+    background-color: rgb(182, 230, 182);
+}
+
+#button:hover{
+    background-color: rgb(216, 210, 210);
+}
+
+
+
+
+.vc-label {
+    text-align: right;
+    margin:-31px 0px 28px 0px; 
+
+}
+
+

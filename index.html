@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>Atendimento on-line</h1>
+        </header>
+        <main>
+            
+            <div id="Atendente">
+                <p>Atendente diz:</p>
+                <div class="at">
+                    <p>Bom dia</p>
+                </div>
+                <p>Atendente diz:</p>
+                <div class="at">
+                    <p>Tudo bem?</p>
+                </div>
+            </div>
+            
+            <div id="voce">
+                <p >Você diz:</p>
+                <div class="vc">
+                    <p>Bom dia</p>
+                </div>
+                <p >Você diz:</p>
+                <div class="vc">
+                    <p>Tudo, e com você?</p>
+                </div>
+            </div>
+
+        </main>
+        <footer>
+            <form id="formulario">
+                <input type="text" id="texto" placeholder="Digite sua mensagem...">
+                <input type="submit" id="button" value="Enviar">
+            </form>
+        </footer>
+    </div>
+
+    <script>
+        function NovaMsg(event) {
+    event.preventDefault();
+
+    const NovaMsg = document.querySelector("#texto").value;
+
+    if (NovaMsg !== "") {
+        const voce = document.querySelector("#voce");
+        const novoItem = document.createElement("div");
+        novoItem.className = "vc";
+
+        const novoLabel = document.createElement("div");
+        novoLabel.className = "vc-label";
+        novoLabel.textContent = "Você diz:";
+
+        const novoParagrafo = document.createElement("p");
+        novoParagrafo.textContent = NovaMsg;
+
+        novoItem.appendChild(novoLabel);
+        novoItem.appendChild(novoParagrafo);
+
+        voce.appendChild(novoItem);
+
+        // Limpa o campo de texto após o envio
+        document.querySelector("#texto").value = "";
+    }
+}
+
+
+        const formulario = document.querySelector("#formulario");
+        formulario.addEventListener("submit", NovaMsg);
+
+        function RemoveMsg(event) {
+            let itemClicado = event.target;
+
+            // Remove o elemento pai do parágrafo clicado
+            itemClicado.parentElement.remove();
+        }
+
+        const voce = document.querySelector("#voce");
+        voce.addEventListener("click", RemoveMsg);
+    </script>
+</body>
+</html>
